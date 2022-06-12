@@ -10,10 +10,17 @@
 
 body {
     // min-width: ?세팅하시고
+    font-family: 'memvYaGs126MiZpBA' ;
     line-height: normal;
     font-size: 14px;
     color:inherit;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'memvYaGs126MiZpBA';
+    src: url(../fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff) format("woff2");
+    font-weight: 400;
 }

@@ -1,0 +1,46 @@
+img { width: 100%;}
+
+
+.honors-box{ 
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.header-area { 
+    width: 100%;
+    
+    .logo{ 
+        position: absolute;
+        top: 40px;
+        left: 45px;
+        width: 35px;
+        height: 45px;
+        background-image: url(../images/logo/logo.svg);
+        z-index: 1;
+    }
+    
+    .util-wrap { 
+        .category-box{
+            position: absolute;
+            right: 45px;
+            top: 50px;
+            width: 95px;
+            height: 45px;
+            cursor: pointer;
+            z-index: 1;
+            .category { 
+                display: block;
+                position: absolute;
+                right: 0;
+                width: 80px;
+                height: 3px;
+                background: rgb(255,255,255);
+
+                &.first { width: 85px; top: 0; }
+                &.two { width: 60px; top: 12px; }
+            }
+        }
+    }
+}
