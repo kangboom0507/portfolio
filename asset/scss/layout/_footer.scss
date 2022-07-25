@@ -1,0 +1,83 @@
+
+
+.footer-area { 
+    padding: 80px 140px;
+    position: relative;
+    box-sizing: border-box;
+
+    @include tablet { padding: 80px 70px;}
+    @include mobile{padding: 10px;}
+
+    .copy{ 
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            color: #fff;
+            font-size: 20px;
+            
+            @include pc { font-size: 16px;}
+            @include mobile { font-size: 10px; right: 10px; bottom: 10px;}
+    
+    }
+
+    .about { 
+        display: flex;
+        justify-content: space-between;
+
+        .title{ 
+            width: 40%;
+            padding-bottom: 15px;
+            font-size: 64px;
+            font-family: 'Coworking';
+
+            @include pc { font-size: 40px;}            
+            @include tablet { font-size: 25px; }            
+            @include mobile{font-size: 12px; width:30%; padding-top: 30px;}
+        }
+        
+        .info-box { 
+            width: 40%;
+            
+            .link-gnb-wrap { 
+                display: flex;
+                width: 400px;
+                justify-content: space-between;
+                @include tablet { width: 250px;}
+                @include mobile{ width: 140px; 
+                }
+              
+                .link-gnb { 
+                    padding: 15px 0;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 500;
+
+                    @include mobile{font-size: 8px; 
+                     line-height: 15px;
+                    }
+
+                    &.link-gnb::after{
+                        content:''; 
+                        display: block;    
+                            height: 2px;
+                            width: 0;
+                            background: #ff3c78;
+                            transition: .5s ease-in-out;}
+                            
+                    &.link-gnb:hover::after { 
+                        width: 100%;
+                    }        
+                    }
+                   
+            }
+            .imail { 
+                font-size: 42px;
+               
+
+                @include pc { font-size: 30px;}
+                @include tablet { font-size: 25px;}
+                @include mobile{font-size: 10px; padding:0 0 20px 20px;}
+            }
+        }
+    }
+}

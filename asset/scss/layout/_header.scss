@@ -1,6 +1,21 @@
-img { width: 100%;}
 
+.cursor { 
+    width: 25px;
+    height: 25px;
+    z-index:100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    pointer-events: none;
 
+    img{
+        width: 50px;
+        height: 50px;
+        
+    }
+}
+  
 .honors-box{ 
     position: fixed;
     top: 50%;
@@ -11,36 +26,99 @@ img { width: 100%;}
 .header-area { 
     width: 100%;
     
+    
     .logo{ 
-        position: absolute;
+       position: fixed;
         top: 40px;
         left: 45px;
-        width: 35px;
-        height: 45px;
-        background-image: url(../images/logo/logo.svg);
-        z-index: 1;
+       font-size: 40px;
+       z-index: 10;
+       color: #fff;
+
+       @include pc{font-size: 30px;}
+       @include mobile{font-size: 16px; left: 10px;  }
     }
     
-    .util-wrap { 
-        .category-box{
-            position: absolute;
-            right: 45px;
-            top: 50px;
-            width: 95px;
-            height: 45px;
-            cursor: pointer;
-            z-index: 1;
-            .category { 
-                display: block;
-                position: absolute;
-                right: 0;
-                width: 80px;
-                height: 3px;
-                background: rgb(255,255,255);
+    .util-wrap{
+        position: relative;
+    
+    .btn-menu{
+       position: fixed;
+        top: 40px; right: 40px;
+        z-index: 9999;
+        color: #fff;
+        font-size: 40px;
 
-                &.first { width: 85px; top: 0; }
-                &.two { width: 60px; top: 12px; }
-            }
+        @include pc { font-size: 30px;}
+        @include mobile{font-size: 16px; right: 20px;}
+
+    }   
+        .sub-menu.on{left:0;}
+        .sub-menu {
+            width: 100%;
+            background: #000;
+            height: 100vh;
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            right:-100%;
+
+            .sub-wrap {
+                padding: 50px 100px;
+
+                .sub-item{
+                    display: block;
+                    padding: 10px 0;
+                    font-size: 100px;
+                    animation: shake .2s infinite ;
+
+                    &::after { 
+                        content:'';
+                        display: inline-block;
+                        width: 100%;
+                        height: 1px;
+                        background:#ff3c78;
+                    }
+                }
+             }
+
+             @keyframes shake {
+                from {
+                  transform: rotate(0.1deg);
+                }
+                to {
+                  transform: rotate(-0.1deg);
+                }
+              }
         }
+    }
+   
+
+    .year { 
+        position: fixed;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        z-index: 10;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 40px;
+
+        @include pc{font-size: 30px;}
+        @include mobile{font-size: 16px; left: 20px;}
+    }
+    .insert {
+        position: fixed;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        z-index: 10;
+        font-size: 30px;
+
+        
+        @include tablet{font-size: 25px; top:120px;}
+        @include mobile{font-size: 16px; top:80px;}
     }
 }
